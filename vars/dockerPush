@@ -11,5 +11,5 @@ def call(String projectName, String imageTag, String dockerHubUser) {
         bat "docker login -u %dockerHubUser% -p %dockerHubPass%"
         bat "docker image tag ${projectName}:${imageTag} ${dockerHubUser}/${projectName}:${imageTag}"
         bat "docker push ${dockerHubUser}/${projectName}:${imageTag}"
-    }
+    }  
 }
